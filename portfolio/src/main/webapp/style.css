@@ -74,3 +74,21 @@ header {
 .spans {
     color: #5B00DB;
 }
+
+#myProjects {
+    padding: 10% 0% 10% 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardProject {
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#titleProject {
+    padding-top: 5%;
+    padding-right: 5%;
+}
