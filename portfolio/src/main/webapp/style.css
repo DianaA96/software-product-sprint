@@ -20,3 +20,42 @@ header {
     color: #DB016A;
 }
 
+#bannerIntroduction {
+    padding: 10% 20% 10% 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#textBannerIntro {
+    margin: auto;
+    margin-right: 10%;
+}
+
+#myName {
+    color: #0a0024;
+    font-size: 35px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#myBiggerName {
+    color: #5B00DB;
+    font-size: 45px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#whatIAm {
+    font-size: 15px;
+}
+
+#myQuote {
+    font-size: 15px;
+}
+
+#imageIntroduction {
+    width: auto;
+    margin: auto;
+    margin-left: 2%;
+}
+
