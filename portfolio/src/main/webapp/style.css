@@ -59,3 +59,18 @@ header {
     margin-left: 2%;
 }
 
+#introducingMyBackground {
+    padding: 10% 20% 10% 20%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.titles {
+    font-size: 235%;
+}
+
+.spans {
+    color: #5B00DB;
+}
