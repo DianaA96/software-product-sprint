@@ -29,9 +29,13 @@ function addRandomFunFact() {
 
 // Getting practice with servlets!
 async function showmyTurnServlet() {
-  const responseFromServer = await fetch('/ihopethisworks');
-  const textFromResponse = await responseFromServer.text();
+  const responseFromServer = await fetch('/favoritewords');
+  const quotesIAdded = await responseFromServer.json();
 
-  const dateContainer = document.getElementById('myTurnServletContainer');
-  dateContainer.innerText = textFromResponse;
+  const quoteContainer = document.getElementById('myTurnServletContainer');
+  quoteContainer.innerHTML = '';
+
+  quoteContainer.appendChild(
+    createListElement(quotesIAdded[Math.floor(Math.random() * funFacts.length)])
+  ); 
 }
