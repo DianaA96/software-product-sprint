@@ -13,6 +13,6 @@ public class MyTurnServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html;");
-    response.getWriter().println("<h1>Well, it worked😂!</h1>");
+    response.getWriter().println("<p>Well, this request worked😂! We can go now to eat something!</p>");
   }
-}
+} 
