@@ -8,9 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
 @WebServlet("/favoritewords")
-public class MyFavQuotes extends HttpServlet {
+public class TelevisionQuotesServlet extends HttpServlet {
 
   @Override
+  
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     String quote1 = "I demand a trial by combat! - Game of Thrones";
