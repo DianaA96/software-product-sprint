@@ -26,3 +26,12 @@ function addRandomFunFact() {
   const funFactContainer = document.getElementById('funFact-container');
   funFactContainer.innerText = funFact;
 }
+
+// Getting practice with servlets!
+async function showmyTurnServlet() {
+  const responseFromServer = await fetch('/ihopethisworks');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('myTurnServletContainer');
+  dateContainer.innerText = textFromResponse;
+}
