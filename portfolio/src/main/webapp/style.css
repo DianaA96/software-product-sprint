@@ -13,6 +13,10 @@ body {
     font-family: 'Didact Gothic', sans-serif;
 }
 
+button{
+    outline: none;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -134,7 +138,7 @@ header {
     text-align: center;
 }
 
-ul {
+#questionsFunFacts {
     list-style-type:none;
     font-family: 'Sacramento', cursive;
     font-size: 220%;
@@ -159,6 +163,11 @@ ul {
     font-family: 'DotGothic16', sans-serif;
     text-align: center;
     padding-top: 30%;
+}
+
+#foodContainer {
+    list-style-type:none;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 footer {
