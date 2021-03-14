@@ -13,16 +13,45 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random fun fact to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomFunFact() {
+  const funFacts =
+      ['I love chocolate', 'I love tacos but hate onion', 'I want to write a book in the future', 'I am afraid of the dark'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random funfact.
+  const funFact = funFacts[Math.floor(Math.random() * funFacts.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const funFactContainer = document.getElementById('funFact-container');
+  funFactContainer.innerText = funFact;
+}
+
+// Getting practice with servlets!
+async function showmyTurnServlet() {
+  const responseFromServer = await fetch('/ihopethisworks');
+  const textFromResponse = await responseFromServer.text();
+
+  const dataContainer = document.getElementById('myTurnServletContainer');
+  dataContainer.innerText = textFromResponse;
+}
+
+async function showFavoriteFood() {
+  const responseFromServer = await fetch('/awesomefood');
+  const foodJson = await responseFromServer.json();
+
+  const dataContainer = document.getElementById('foodContainer');
+  dataContainer.innerHTML = '';
+
+  dataContainer.appendChild(
+      createListElement("Maybe you should go and taste " + foodJson[0].dishName + " now! They are from " + foodJson[0].origin + "!"));
+
+  dataContainer.appendChild(
+      createListElement("Or " + foodJson[1].dishName + ". They are popular in " + foodJson[1].origin + "!"));
+}
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
