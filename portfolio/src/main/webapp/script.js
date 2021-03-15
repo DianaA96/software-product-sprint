@@ -55,3 +55,24 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }
+
+function translateText() {
+    const text = document.getElementById('textToTranslate').textContent;
+    const languageCode = document.getElementById('language').value;
+
+    const resultContainer = document.getElementById('textToTranslate');
+    resultContainer.innerText = 'Loading...';
+
+    const params = new URLSearchParams();
+    params.append('text', text);
+    params.append('languageCode', languageCode);
+
+    fetch('/translatingInfo', {
+        method: 'POST',
+        body: params
+    }).then(response => response.text())
+      .then((translatedMessage) => {
+        resultContainer.innerText = translatedMessage;
+        }
+    );
+}
