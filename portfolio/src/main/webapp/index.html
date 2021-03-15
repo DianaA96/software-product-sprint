@@ -32,8 +32,22 @@
 
         <div id="introducingMyBackground">
             <h2 class="titles">my<span class="spans">background</span></h2>
-            <p class="normalText">First of all, I would like to introduce myself more properly. As I said, I am Diana and I was born in Mexico City 24 years ago. I live in a very small town called Temascalapa, located at the north of the State of Mexico. I am a sophomore majoring Computer Science at Tec de Monterrey in Mexico.</p>
-            <p class="normalText">I studied at university some years ago to become an English teacher! I really loved education, so I decided to start studying CS to come to reach more people through technologies. We've already seen how important is to be prepared for emergencies, isn't it?</p>
+            <p id="textToTranslate">First of all, I would like to introduce myself more properly. As I said, I am Diana and I was born in Mexico City 24 years ago. I live in a very small town called Temascalapa, located at the north of the State of Mexico. I am a sophomore majoring Computer Science at Tec de Monterrey in Mexico.<br> I studied at university some years ago to become an English teacher! I really loved education, so I decided to start studying CS to come to reach more people through technologies. We've already seen how important is to be prepared for emergencies, isn't it? </p>
+            <br>
+            <h6>Would you like to read this in another language? Select a language and click on the button below!</h6>
+            <br>
+            <select id="language">
+                <option value="es">Spanish</option>
+                <option value="zh">Chinese</option>
+                <option value="de">German</option>
+                <option value="ca">Catalan/Valencian</option>
+                <option value="gl">Galician</option>
+                <option value="he">Hebrew</option>
+                <option value="hi">Hindi</option>
+                <option value="ar">Arabic</option>
+            </select>
+            <button onclick='translateText();' id='buttonTrivia'>Translate me!</button>
+            <p id='translatedText'></p>
         </div>
 
         <div id="myProjects">
